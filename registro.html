@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro de Rutas del Perú">
+    <title>Rutas del Perú - Registro</title>
+    <link rel="stylesheet" href="styles/estilo.css">
+	<link rel="icon" href="https://img.icons8.com/?size=50&id=FBO05Dys9QCg&format=png">
+</head>
+<body>
+    <header>
+        <h1>Rutas del Perú</h1>
+        <p>Solicitud de información de viaje</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="tabla.html">Destinos</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de registro</h2>
+            <p>Completa tus datos para recibir información sobre nuestros viajes.</p>
+
+            <form>
+                <fieldset>
+                    <legend><strong>Datos personales</strong></legend>
+
+                    <label><strong>Nombre:</strong></label>
+                    <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="50" required>
+                    
+                    <label><strong>DNI:</strong></label>
+                    <input type="text" name="dni" placeholder="Ingrese 8 dígitos" minlength="8" maxlength="8" required>
+                
+                    <label><strong>Correo electrónico:</strong></label>
+                    <input type="email" name="email" placeholder="ejemplo@correo.com" maxlength="60" required>
+                    
+                    <label><strong>Número de celular:</strong></label>
+                    <input type="tel" name="telefono" placeholder="Ingrese 9 dígitos" inputmode="numeric" minlength="9" maxlength="9" required>
+                    
+                    <p><strong>Sexo:</strong></p>
+                    <label>
+                        <input type="radio" name="sexo" value="masculino" required>
+                        Masculino
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="sexo" value="femenino">
+                        Femenino
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="sexo" value="prefiero-no-decirlo">
+                        Prefiero no indicarlo
+                    </label>
+                    <br>
+                    <label><strong>País:</strong></label>
+                    <select name="pais" required>
+                        <option value="">Seleccione un país</option>
+                        <option value="peru">Perú</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="ecuador">Ecuador</option>
+                        <option value="chile">Chile</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+                    <br>
+                    <label><strong>Número de viajeros:</strong></label>
+                    <input type="number" name="viajeros" min="1" max="10" placeholder="Ingrese una cantidad" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Preferencias de viaje</strong></legend>
+
+                    <p>Destinos de interés (puede marcar varias opciones):</p>
+                    <label>
+                        <input type="checkbox" name="destinos" value="cusco">
+                        Cusco
+                    </label>
+                    <label>
+                        <input type="checkbox" name="destinos" value="arequipa">
+                        Arequipa
+                    </label>
+                    <label>
+                        <input type="checkbox" name="destinos" value="tarapoto">
+                        Tarapoto
+                    </label>
+                    <br>
+                    <br>
+                    <label><strong>Recomendación u opinión:</strong></label>
+                    <br>
+                    <textarea name="opinion" rows="5" minlength="10" maxlength="300" placeholder="Escriba su opinión o consulta" required></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar solicitud</button>
+                <button type="reset">Limpiar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Rutas del Perú - Página web 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,126 +1,308 @@
+/* Estilos básicos compartidos por las cinco páginas. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-	margin: 0;
-	font-family: Arial, sans-serif;
-	color: #333333;
-	background-color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
 }
-
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 header {
-	padding: 20px;
-	text-align: center;
-	color: white;
-	background-color: #176b87;
+    background-color: #ffffff;
+    padding: 20px 0;
 }
-
-header h1 {
-	margin: 0;
+.header-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
-
-nav {
-	padding: 15px;
-	text-align: center;
-	background-color: #0f4f65;
+.marca {
+    color: #176b87;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
 }
-
-nav a {
-	margin: 0 10px;
-	color: white;
-	text-decoration: none;
+.menu {
+    display: flex;
+    gap: 10px;
 }
-
-nav a:hover {
-	color: #f2a541;
+.menu a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
-
+.menu a:hover, .menu .activo {
+    color: #176b87;
+}
 main {
-	width: 80%;
-	margin: 20px auto;
+    padding: 20px 0;
 }
-
 section {
-	margin-bottom: 20px;
-	padding: 20px;
-	background-color: white;
-	border: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
-h2,
+h1, h2, h3 {
+    color: #176b87;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
 h3 {
-	color: #176b87;
+    font-size: 20px;
 }
-
-img,
-video {
-	max-width: 100%;
-	
+p {
+    margin-bottom: 15px;
 }
-
-audio {
-	width: 100%;
-	max-width: 500px;
+a {
+    color: #176b87;
 }
-
-table {
-	width: 100%;
-	border-collapse: collapse;
-	background-color: white;
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #176b87, #0f4f65);
+    color: #ffffff;
+    padding: 50px 20px;
 }
-
-th,
-td {
-	padding: 10px;
-	text-align: left;
-	border: 1px solid #cccccc;
+.hero-contenido {
+    max-width: 800px;
+    margin: auto;
 }
-
-th {
-	color: white;
-	background-color: #176b87;
+.hero h1 {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.2;
 }
-
-tr:hover {
-	background-color: #eaf6f8;
+.etiqueta {
+    color: #875007;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
 }
-
-input,
-select,
-textarea,
-button {
-	margin-top: 5px;
-	padding: 8px;
+.hero .etiqueta {
+    color: #ffd397;
 }
-
-input,
-select,
-textarea {
-	max-width: 100%;
-}
-
-button {
-	color: white;
-	background-color: #176b87;
-	border: none;
-}
-
-button:hover {
-	background-color: #0f4f65;
-}
-
-footer {
-	padding: 15px;
-	text-align: center;
-	color: white;
-	background-color: #333333;
-}
-.video {
+.hero-imagen {
     width: 600px;
+    margin-top: 25px;
 }
-
-section {
-    border: 1.5px solid #5386a8;
-    border-radius: 10px;
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-img {
+.titulo-animado {
+    animation: aparecer 2s ease;
+}
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.boton-principal {
+    background-color: #176b87;
+    color: #ffffff;
+}
+.hero .boton-principal {
+    background-color: #ffffff;
+    color: #176b87;
+}
+.boton-secundario {
+    background-color: #f2a541;
+    color: #333333;
+}
+.boton:hover {
+    transform: translateY(-3px);
+}
+.hero-botones, .formulario-botones {
+    margin-top: 20px;
+}
+.titulos-seccion {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.tarjetas, .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.tarjeta, .servicio {
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
+    border-left: 5px solid #f2a541;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease;
+}
+.tarjeta:hover, .servicio:hover {
+    transform: translateY(-10px);
+}
+.icono {
+    font-size: 36px;
+}
+.categoria {
+    color: #875007;
+    font-size: 14px;
+    font-weight: bold;
+}
+.servicio h2 {
+    font-size: 20px;
+}
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+li {
+    margin-bottom: 8px;
+}
+.multimedia, .contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.video, .imagen-contacto, audio {
+    width: 100%;
+}
+.datos-contacto {
+    font-size: 14px;
+}
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+caption {
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #cccccc;
+}
+thead th {
+    background-color: #176b87;
+    color: #ffffff;
+}
+.fila-alterna {
+    background-color: #f1f5f6;
+}
+tr:hover {
+    background-color: #eaf6f8;
+}
+.formulario-registro {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+.formulario-registro fieldset {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-left: 5px solid #f2a541;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+.formulario-registro legend {
+    background-color: #176b87;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.campo label, .campo-titulo {
+    font-weight: bold;
+}
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+.opciones {
+    display: flex;
+    gap: 15px;
+}
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+.opciones input {
+    width: auto;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #0f4f65;
+    color: #ffffff;
+}
+footer p {
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .header-contenido, .menu {
+        flex-direction: column;
+    }
+    .menu {
+        align-items: center;
+    }
+    .tarjetas, .servicios-grid, .multimedia, .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .formulario-registro {
+        width: 100%;
+    }
+    .opciones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

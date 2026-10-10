@@ -3,104 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formulario de registro de Rutas del Perú">
+    <meta name="description" content="Formulario de registro y preferencias de viaje de Rutas del Perú.">
     <title>Rutas del Perú - Registro</title>
     <link rel="stylesheet" href="styles/estilo.css">
-	<link rel="icon" href="https://img.icons8.com/?size=50&id=FBO05Dys9QCg&format=png">
+    <link rel="icon" type="image/png" href="images/image.png">
 </head>
 <body>
     <header>
-        <h1>Rutas del Perú</h1>
-        <p>Solicitud de información de viaje</p>
+        <div class="contenedor header-contenido">
+            <a href="index.html" class="marca">&#x1F9ED; RUTAS DEL PERÚ</a>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="Contacto.html">Contacto</a>
+                <a href="tabla.html">Destinos</a>
+                <a href="registro.html" class="activo">Registro</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="Contacto.html">Contacto</a>
-        <a href="tabla.html">Destinos</a>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Formulario de registro</h2>
-            <p>Completa tus datos para recibir información sobre nuestros viajes.</p>
-
-            <form>
+    <main class="contenedor">
+        <section class="registro">
+            <div class="titulos-seccion">
+                <p class="etiqueta">PREPARA TU PRÓXIMO VIAJE</p>
+                <h1 class="titulo-animado">Registro de Rutas del Perú</h1>
+                <p>Completa tus datos y elige los destinos que te interesan.</p>
+            </div>
+            <form class="formulario-registro" action="registro.html" method="get">
                 <fieldset>
-                    <legend><strong>Datos personales</strong></legend>
-
-                    <label><strong>Nombre:</strong></label>
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="50" required>
-                    
-                    <label><strong>DNI:</strong></label>
-                    <input type="text" name="dni" placeholder="Ingrese 8 dígitos" minlength="8" maxlength="8" required>
-                
-                    <label><strong>Correo electrónico:</strong></label>
-                    <input type="email" name="email" placeholder="ejemplo@correo.com" maxlength="60" required>
-                    
-                    <label><strong>Número de celular:</strong></label>
-                    <input type="tel" name="telefono" placeholder="Ingrese 9 dígitos" inputmode="numeric" minlength="9" maxlength="9" required>
-                    
-                    <p><strong>Sexo:</strong></p>
-                    <label>
-                        <input type="radio" name="sexo" value="masculino" required>
-                        Masculino
-                    </label>
-                    <label class="opcion">
-                        <input type="radio" name="sexo" value="femenino">
-                        Femenino
-                    </label>
-                    <label class="opcion">
-                        <input type="radio" name="sexo" value="prefiero-no-decirlo">
-                        Prefiero no indicarlo
-                    </label>
-                    <br>
-                    <label><strong>País:</strong></label>
-                    <select name="pais" required>
-                        <option value="">Seleccione un país</option>
-                        <option value="peru">Perú</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="ecuador">Ecuador</option>
-                        <option value="chile">Chile</option>
-                        <option value="argentina">Argentina</option>
-                    </select>
-                    <br>
-                    <label><strong>Número de viajeros:</strong></label>
-                    <input type="number" name="viajeros" min="1" max="10" placeholder="Ingrese una cantidad" required>
+                    <legend>Datos personales</legend>
+                    <div class="datos-personales">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="50" required>
+                        </div>
+                        <div class="campo">
+                            <label for="dni">DNI:</label>
+                            <input type="text" id="dni" name="dni" placeholder="Ingrese 8 dígitos" inputmode="numeric" minlength="8" maxlength="8" required>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" maxlength="60" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Número de celular:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese 9 dígitos" inputmode="numeric" minlength="9" maxlength="9" required>
+                        </div>
+                        <div class="campo">
+                            <label for="pais">País:</label>
+                            <select id="pais" name="pais" required>
+                                <option value="">Seleccione un país</option>
+                                <option value="peru">Perú</option>
+                                <option value="colombia">Colombia</option>
+                                <option value="ecuador">Ecuador</option>
+                                <option value="chile">Chile</option>
+                                <option value="argentina">Argentina</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="viajeros">Número de viajeros:</label>
+                            <input type="number" id="viajeros" name="viajeros" min="1" max="10" placeholder="De 1 a 10 viajeros" required>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <p id="etiqueta-sexo" class="campo-titulo">Sexo:</p>
+                        <div class="opciones">
+                            <label><input type="radio" name="sexo" value="masculino" required> Masculino</label>
+                            <label><input type="radio" name="sexo" value="femenino"> Femenino</label>
+                            <label><input type="radio" name="sexo" value="prefiero-no-decirlo"> Prefiero no indicarlo</label>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend><strong>Preferencias de viaje</strong></legend>
-
-                    <p>Destinos de interés (puede marcar varias opciones):</p>
-                    <label>
-                        <input type="checkbox" name="destinos" value="cusco">
-                        Cusco
-                    </label>
-                    <label>
-                        <input type="checkbox" name="destinos" value="arequipa">
-                        Arequipa
-                    </label>
-                    <label>
-                        <input type="checkbox" name="destinos" value="tarapoto">
-                        Tarapoto
-                    </label>
-                    <br>
-                    <br>
-                    <label><strong>Recomendación u opinión:</strong></label>
-                    <br>
-                    <textarea name="opinion" rows="5" minlength="10" maxlength="300" placeholder="Escriba su opinión o consulta" required></textarea>
+                    <legend>Preferencias de viaje</legend>
+                    <div class="campo">
+                        <p id="etiqueta-destinos" class="campo-titulo">Destinos de interés (puede marcar varias opciones):</p>
+                        <div class="opciones">
+                            <label><input type="checkbox" name="destinos" value="cusco"> Cusco</label>
+                            <label><input type="checkbox" name="destinos" value="arequipa"> Arequipa</label>
+                            <label><input type="checkbox" name="destinos" value="tarapoto"> Tarapoto</label>
+                            <label><input type="checkbox" name="destinos" value="lima"> Cancún</label>
+                            <label><input type="checkbox" name="destinos" value="puno"> Cartagena</label>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="opinion">Recomendación u opinión:</label>
+                        <textarea id="opinion" name="opinion" rows="5" minlength="10" maxlength="300" placeholder="Escriba su opinión o consulta (de 10 a 300 caracteres)" required></textarea>
+                    </div>
                 </fieldset>
 
-                <button type="submit">Enviar solicitud</button>
-                <button type="reset">Limpiar</button>
+                <div class="formulario-botones">
+                    <button type="submit" class="boton boton-principal">Enviar solicitud</button>
+                    <button type="reset" class="boton boton-secundario">Limpiar</button>
+                </div>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>Rutas del Perú - Página web 2026</p>
+        <div class="contenedor">
+            <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
+        </div>
     </footer>
 </body>
 </html>

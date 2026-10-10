@@ -3,48 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicios de la agencia Rutas del Perú">
+    <meta name="description" content="Paquetes turísticos, hoteles, transporte y guías de Rutas del Perú.">
     <title>Rutas del Perú - Servicios</title>
     <link rel="stylesheet" href="styles/estilo.css">
-	<link rel="icon" href="https://img.icons8.com/?size=50&id=FBO05Dys9QCg&format=png">
+    <link rel="icon" type="image/png" href="images/image.png">
 </head>
 <body>
     <header>
-        <h1>Rutas del Perú</h1>
-        <p>Nuestros servicios turísticos</p>
+        <div class="contenedor header-contenido">
+            <a href="index.html" class="marca">&#x1F9ED; RUTAS DEL PERÚ</a>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html" class="activo">Servicios</a>
+                <a href="Contacto.html">Contacto</a>
+                <a href="tabla.html">Destinos</a>
+                <a href="registro.html">Registro</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Contacto.html">Contacto</a>
-        <a href="registro.html">Registro</a>
-        <a href="tabla.html">Destinos</a>
-    </nav>
-
-    <main>
+    <main class="contenedor">
         <section>
-            <h2>Servicios disponibles</h2>
-            <p>Ofrecemos diferentes servicios para organizar tu próximo viaje:</p>
+            <div class="titulos-seccion">
+                <p class="etiqueta">ORGANIZA TU VIAJE</p>
+                <h1 class="titulo-animado">Nuestros servicios turísticos</h1>
+                <p>Te ayudamos a preparar tu próxima aventura con atención personalizada.</p>
+            </div>
+            <div class="servicios-grid">
+                <article class="servicio">
+                    <span class="icono">&#x1F9F3;</span>
+                    <h2>Paquetes turísticos</h2>
+                    <p>Elige el viaje que más te guste:</p>
+                    <ul>
+                        <li>Paquetes nacionales.</li>
+                        <li>Paquetes internacionales.</li>
+                    </ul>
+                </article>
+                <article class="servicio">
+                    <span class="icono">&#x1F3E8;</span>
+                    <h2>Reservas de hoteles</h2>
+                    <p>Encuentra alojamiento para descansar durante tu viaje.</p>
+                </article>
+                <article class="servicio">
+                    <span class="icono">&#x1F68C;</span>
+                    <h2>Transporte turístico</h2>
+                    <p>Organiza tus traslados para recorrer los destinos elegidos.</p>
+                </article>
+                <article class="servicio">
+                    <span class="icono">&#x1F465;</span>
+                    <h2>Guía turístico</h2>
+                    <p>Conoce la historia y los atractivos de cada lugar con orientación.</p>
+                </article>
+            </div>
+        </section>
 
-            <ul>
-                <li>Paquetes turísticos nacionales.</li>
-                <li>Paquetes turísticos internacionales.</li>
-                <li>Reservas de hoteles.</li>
-                <li>Transporte turístico.</li>
-                <li>Servicio de guía turístico.</li>
-            </ul>
-
-            <h3>¿Por qué viajar con nosotros?</h3>
+        <section>
+            <h2>¿Por qué viajar con nosotros?</h2>
             <ol>
                 <li>Brindamos atención personalizada.</li>
                 <li>Trabajamos con precios accesibles.</li>
                 <li>Contamos con destinos variados.</li>
             </ol>
+            <a href="registro.html" class="boton boton-principal">Solicitar información</a>
         </section>
     </main>
 
     <footer>
-        <p>Rutas del Perú - Página web 2026</p>
+        <div class="contenedor">
+            <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
+        </div>
     </footer>
 </body>
 </html>

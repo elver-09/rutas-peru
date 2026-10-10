@@ -3,51 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agencia de viajes Rutas del Perú">
+    <meta name="description" content="Conoce los destinos y servicios de la agencia Rutas del Perú.">
     <title>Rutas del Perú - Inicio</title>
     <link rel="stylesheet" href="styles/estilo.css">
-	<link rel="icon" href="https://img.icons8.com/?size=50&id=FBO05Dys9QCg&format=png">
+    <link rel="icon" type="image/png" href="images/image.png">
 </head>
 <body>
     <header>
-        <h1>Rutas del Perú</h1>
-        <p>Conoce los mejores destinos del Perú</p>
+        <div class="contenedor header-contenido">
+            <a href="index.html" class="marca">&#x1F9ED; RUTAS DEL PERÚ</a>
+            <nav class="menu">
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="Contacto.html">Contacto</a>
+                <a href="tabla.html">Destinos</a>
+                <a href="registro.html">Registro</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="Contacto.html">Contacto</a>
-        <a href="registro.html">Registro</a>
-        <a href="tabla.html">Destinos</a>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Bienvenidos</h2>
-            <p>
-                Somos una agencia dedicada a mostrar la <strong> cultural y natural
-                del Perú</strong> mediante viajes seguros y accesibles.
-            </p>
-            <img src="images/image.png" alt="Vista panorámica de Machu Picchu" width="600">
+    <main class="contenedor">
+        <section class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">DESCUBRE NUEVAS RUTAS</p>
+                <h1 class="titulo-animado">Tu próxima aventura comienza en Perú</h1>
+                <p>Somos una agencia dedicada a mostrar la <strong>riqueza cultural y natural del Perú</strong> mediante viajes seguros y accesibles.</p>
+                <div class="hero-botones">
+                    <a href="tabla.html" class="boton boton-principal">Ver destinos</a>
+                    <a href="registro.html" class="boton boton-secundario">Regístrate</a>
+                </div>
+            </div>
+            <img class="hero-imagen" src="images/image.png" alt="Vista panorámica de Machu Picchu en Cusco" width="1920" height="929">
         </section>
 
         <section>
-            <h2>Multimedia</h2>
-            <p>Escucha nuestro audio de bienvenida:</p>
-            <audio controls>
-                <source src="audio/bienvenida.mp3" type="audio/mpeg">
-            </audio>
+            <div class="titulos-seccion">
+                <p class="etiqueta">ENCUENTRA TU DESTINO</p>
+                <h2>Viajes destacados</h2>
+                <p>Conoce algunas opciones para tus próximas vacaciones.</p>
+            </div>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <span class="icono">&#x1F3D4;</span>
+                    <p class="categoria">Cultura y aventura</p>
+                    <h3>Cusco</h3>
+                    <p>Descubre su historia, sus paisajes y la magia de Machu Picchu.</p>
+                    <a href="tabla.html">Ver paquete</a>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">&#x1F3DB;</span>
+                    <p class="categoria">Ciudad y tradición</p>
+                    <h3>Arequipa</h3>
+                    <p>Recorre la Ciudad Blanca y disfruta de sus atractivos turísticos.</p>
+                    <a href="tabla.html">Ver paquete</a>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">&#x1F334;</span>
+                    <p class="categoria">Naturaleza</p>
+                    <h3>Tarapoto</h3>
+                    <p>Disfruta de la selva, sus cataratas y sus paisajes naturales.</p>
+                    <a href="tabla.html">Ver paquete</a>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">&#x2708;</span>
+                    <p class="categoria">Viajes internacionales</p>
+                    <h3>Más destinos</h3>
+                    <p>Explora también nuestras opciones de Cancún y Cartagena.</p>
+                    <a href="tabla.html">Ver paquetes</a>
+                </article>
+            </div>
+        </section>
 
-            <p>Observa nuestro video turístico:</p>
-            <video controls class="video">
-                <source src="video/video.mp4" type="video/mp4">
-            </video>
+        <section>
+            <div class="titulos-seccion">
+                <p class="etiqueta">CONOCE RUTAS DEL PERÚ</p>
+                <h2>Multimedia</h2>
+                <p>Escucha nuestra bienvenida y observa nuestro video turístico.</p>
+            </div>
+            <div class="multimedia">
+                <div>
+                    <h3>Audio de bienvenida</h3>
+                    <p>Una presentación de nuestra agencia.</p>
+                    <audio controls>
+                        <source src="audio/bienvenida.mp3" type="audio/mpeg">
+                        Tu navegador no admite audio. <a href="audio/bienvenida.mp3">Abrir audio</a>.
+                    </audio>
+                </div>
+                <div>
+                    <h3>Video turístico</h3>
+                    <video controls poster="images/image.png" class="video">
+                        <source src="video/video.mp4" type="video/mp4">
+                        Tu navegador no admite video. <a href="video/video.mp4">Abrir video</a>.
+                    </video>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>Rutas del Perú - Página web 2026</p>
+        <div class="contenedor">
+            <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
+        </div>
     </footer>
 </body>
 </html>

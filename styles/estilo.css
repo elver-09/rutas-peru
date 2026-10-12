@@ -101,6 +101,10 @@ a {
 .hero-imagen {
     width: 600px;
     margin-top: 25px;
+    padding: 8px;
+    background-color: #f1f5f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: aparecer 2s ease;
 }
 @keyframes aparecer {
     from {
@@ -148,11 +152,36 @@ a {
     text-align: center;
     margin-bottom: 25px;
 }
-.tarjetas, .servicios-grid {
+.tarjetas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #eff2f7;
+    padding: 25px;
+    border-radius: 8px;
+    
+}
+
+.servicio:hover{
+    background-color: #f2a541;
+    color: #f1f5f6;
+}
+
+.servicio:hover h2{
+    
+    color: #f1f5f6;
+}
+
+
+
+
+
 .tarjeta, .servicio {
     background-color: #ffffff;
     padding: 20px;

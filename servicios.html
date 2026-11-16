@@ -38,21 +38,25 @@
                         <li>Paquetes nacionales.</li>
                         <li>Paquetes internacionales.</li>
                     </ul>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Paquetes turísticos" data-descripcion="Revisa los destinos nacionales e internacionales, sus precios y su duración en la tabla.">Ver detalles</button>
                 </article>
                 <article class="servicio">
                     <span class="icono">&#x1F3E8;</span>
                     <h2>Reservas de hoteles</h2>
                     <p>Encuentra alojamiento para descansar durante tu viaje.</p>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Reservas de hoteles" data-descripcion="Indícanos tu destino y tu fecha de viaje para consultar opciones de alojamiento.">Ver detalles</button>
                 </article>
                 <article class="servicio">
                     <span class="icono">&#x1F68C;</span>
                     <h2>Transporte turístico</h2>
                     <p>Organiza tus traslados para recorrer los destinos elegidos.</p>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Transporte turístico" data-descripcion="Consulta las opciones de traslado según el destino y la cantidad de viajeros.">Ver detalles</button>
                 </article>
                 <article class="servicio">
                     <span class="icono">&#x1F465;</span>
                     <h2>Guía turístico</h2>
                     <p>Conoce la historia y los atractivos de cada lugar con orientación.</p>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Guía turístico" data-descripcion="Pide información sobre los recorridos guiados del destino que te interesa.">Ver detalles</button>
                 </article>
             </div>
         </section>
@@ -66,6 +70,13 @@
             </ol>
             <a href="registro.html" class="boton boton-principal">Solicitar información</a>
         </section>
+        <div class="modal" id="modalDetalles">
+            <div class="modal-contenido">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalDescripcion"></p>
+                <button type="button" class="boton boton-principal" id="cerrarModal">Cerrar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -73,5 +84,6 @@
             <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
         </div>
     </footer>
+    <script src="js/Interacciones.js"></script>
 </body>
 </html>

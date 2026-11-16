@@ -29,13 +29,14 @@
                 <h1 class="titulo-animado">Registro de Rutas del Perú</h1>
                 <p>Completa tus datos y elige los destinos que te interesan.</p>
             </div>
-            <form class="formulario-registro" action="registro.html" method="get">
+            <form class="formulario-registro" id="formularioRegistro">
                 <fieldset>
                     <legend>Datos personales</legend>
                     <div class="datos-personales">
                         <div class="campo">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" minlength="3" maxlength="50" required>
+                            <p id="mensajeNombre"></p>
                         </div>
                         <div class="campo">
                             <label for="dni">DNI:</label>
@@ -83,10 +84,11 @@
                             <label><input type="checkbox" name="destinos" value="cusco"> Cusco</label>
                             <label><input type="checkbox" name="destinos" value="arequipa"> Arequipa</label>
                             <label><input type="checkbox" name="destinos" value="tarapoto"> Tarapoto</label>
-                            <label><input type="checkbox" name="destinos" value="lima"> Cancún</label>
-                            <label><input type="checkbox" name="destinos" value="puno"> Cartagena</label>
+                            <label><input type="checkbox" name="destinos" value="cancun"> Cancún</label>
+                            <label><input type="checkbox" name="destinos" value="cartagena"> Cartagena</label>
                         </div>
                     </div>
+                    <p id="mensajeDestinos"></p>
                     <div class="campo">
                         <label for="opinion">Recomendación u opinión:</label>
                         <textarea id="opinion" name="opinion" rows="5" minlength="10" maxlength="300" placeholder="Escriba su opinión o consulta (de 10 a 300 caracteres)" required></textarea>
@@ -98,6 +100,30 @@
                     <button type="reset" class="boton boton-secundario">Limpiar</button>
                 </div>
             </form>
+
+            <section id="resultadoRegistro" style="display: none;">
+                <h2>Resumen de la solicitud</h2>
+                <p><strong>Nombre:</strong> <span id="resNombre"></span></p>
+                <p><strong>Correo:</strong> <span id="resEmail"></span></p>
+                <p><strong>País:</strong> <span id="resPais"></span></p>
+                <p><strong>Viajeros:</strong> <span id="resViajeros"></span></p>
+                <p><strong>Destinos:</strong> <span id="resDestinos"></span></p>
+                <p><strong>Consulta:</strong> <span id="resOpinion"></span></p>
+            </section>
+
+            <section class="formulario-registro">
+                <h2>Evaluar edad</h2>
+                <div class="campo">
+                    <label for="nombrePersona">Nombre:</label>
+                    <input type="text" id="nombrePersona" placeholder="Ingrese su nombre">
+                </div>
+                <div class="campo">
+                    <label for="edadPersona">Edad:</label>
+                    <input type="number" id="edadPersona" min="0" max="120" placeholder="Ingrese su edad">
+                </div>
+                <button type="button" class="boton boton-principal" id="btnEvaluarEdad">Evaluar edad</button>
+                <p id="resultadoEdad"></p>
+            </section>
         </section>
     </main>
 
@@ -106,5 +132,6 @@
             <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
         </div>
     </footer>
+    <script src="js/Registro.js"></script>
 </body>
 </html>

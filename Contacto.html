@@ -37,6 +37,7 @@
                     <p>&#x1F4E7; <strong>Correo:</strong> <a href="mailto:contacto@rutasdelperu.com">contacto@rutasdelperu.com</a></p>
                     <p>&#x1F552; <strong>Horario:</strong> lunes a sábado, de 9:00 a. m. a 6:00 p. m.</p>
                     <a href="mailto:contacto@rutasdelperu.com" class="boton boton-principal">Enviar correo</a>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Horario de atención" data-descripcion="Atendemos de lunes a sábado, de 9:00 a. m. a 6:00 p. m. Puedes llamarnos al 987 654 321.">Ver horario</button>
                 </div>
                 <div>
                     <img class="imagen-contacto" src="images/image.png" alt="Machu Picchu, uno de los destinos turísticos de Cusco" width="1920" height="929">
@@ -44,6 +45,13 @@
                 </div>
             </div>
         </section>
+        <div class="modal" id="modalDetalles">
+            <div class="modal-contenido">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalDescripcion"></p>
+                <button type="button" class="boton boton-principal" id="cerrarModal">Cerrar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -51,5 +59,6 @@
             <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
         </div>
     </footer>
+    <script src="js/Interacciones.js"></script>
 </body>
 </html>

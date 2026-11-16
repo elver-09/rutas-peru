@@ -49,6 +49,7 @@
                     <h3>Cusco</h3>
                     <p>Descubre su historia, sus paisajes y la magia de Machu Picchu.</p>
                     <a href="tabla.html">Ver paquete</a>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Cusco" data-descripcion="El paquete a Cusco dura 4 días. Machu Picchu es uno de los atractivos de este destino.">Ver detalles</button>
                 </article>
                 <article class="tarjeta">
                     <span class="icono">&#x1F3DB;</span>
@@ -56,6 +57,7 @@
                     <h3>Arequipa</h3>
                     <p>Recorre la Ciudad Blanca y disfruta de sus atractivos turísticos.</p>
                     <a href="tabla.html">Ver paquete</a>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Arequipa" data-descripcion="El paquete de 3 días te permite conocer la Ciudad Blanca.">Ver detalles</button>
                 </article>
                 <article class="tarjeta">
                     <span class="icono">&#x1F334;</span>
@@ -63,6 +65,7 @@
                     <h3>Tarapoto</h3>
                     <p>Disfruta de la selva, sus cataratas y sus paisajes naturales.</p>
                     <a href="tabla.html">Ver paquete</a>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Tarapoto" data-descripcion="El paquete dura 4 días. Es una opción para conocer los paisajes de la selva.">Ver detalles</button>
                 </article>
                 <article class="tarjeta">
                     <span class="icono">&#x2708;</span>
@@ -70,6 +73,7 @@
                     <h3>Más destinos</h3>
                     <p>Explora también nuestras opciones de Cancún y Cartagena.</p>
                     <a href="tabla.html">Ver paquetes</a>
+                    <button type="button" class="boton boton-secundario btn-detalles" data-titulo="Más destinos" data-descripcion="Consulta en la tabla las opciones de Cancún y Cartagena y su disponibilidad.">Ver detalles</button>
                 </article>
             </div>
         </section>
@@ -98,6 +102,13 @@
                 </div>
             </div>
         </section>
+        <div class="modal" id="modalDetalles">
+            <div class="modal-contenido">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalDescripcion"></p>
+                <button type="button" class="boton boton-principal" id="cerrarModal">Cerrar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -105,5 +116,6 @@
             <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
         </div>
     </footer>
+    <script src="js/Interacciones.js"></script>
 </body>
 </html>

@@ -82,7 +82,15 @@
             </div>
 
             <a href="registro.html" class="boton boton-principal">Solicitar información</a>
+            <button type="button" class="boton boton-secundario btn-detalles" data-titulo="¿Cómo solicitar información?" data-descripcion="Revisa la disponibilidad en la tabla y marca los destinos que te interesan en el formulario de registro.">Cómo solicitar información</button>
         </section>
+        <div class="modal" id="modalDetalles">
+            <div class="modal-contenido">
+                <h2 id="modalTitulo"></h2>
+                <p id="modalDescripcion"></p>
+                <button type="button" class="boton boton-principal" id="cerrarModal">Cerrar</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -90,5 +98,6 @@
             <p>&copy; 2026 Rutas del Perú - Proyecto de Taller de Programación Web</p>
         </div>
     </footer>
+    <script src="js/Interacciones.js"></script>
 </body>
 </html>

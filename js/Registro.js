@@ -1,3 +1,27 @@
+const destinosDisponibles = ["Cusco", "Arequipa", "Tarapoto", "Cancún", "Cartagena"];
+const listaDestinos = document.getElementById("listaDestinos");
+
+function mostrarDestinos() {
+    listaDestinos.innerHTML = "";
+
+    for (let i = 0; i < destinosDisponibles.length; i++) {
+        const etiqueta = document.createElement("label");
+        const casilla = document.createElement("input");
+        const texto = document.createElement("span");
+
+        casilla.type = "checkbox";
+        casilla.name = "destinos";
+        casilla.value = destinosDisponibles[i];
+        texto.textContent = destinosDisponibles[i];
+
+        etiqueta.appendChild(casilla);
+        etiqueta.appendChild(texto);
+        listaDestinos.appendChild(etiqueta);
+    }
+}
+
+mostrarDestinos();
+
 const formulario = document.getElementById("formularioRegistro");
 const campoNombre = document.getElementById("nombre");
 const mensajeNombre = document.getElementById("mensajeNombre");
